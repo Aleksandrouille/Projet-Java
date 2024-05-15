@@ -1,0 +1,61 @@
+Classe: 1A ASE
+Élèves: Buszta Aleksandra
+
+
+Afin de pouvoir utiliser le programme, il faut créer 3 dossiers dans le dossier Document (Source/Reference/Backup)
+Créer dans l’ordre : Backup , Reference , Source. Ensuite modifier d’abord le dossier Source avant de lancer.
+
+NB : Les paths peuvent être différents selon le nom de l’utilisateur. (ici Rosabelle).
+
+Pour lancer le programme, il faut lancer le programme « Automatisation »
+
+L’utilisateur ajoute, supprime ou change des fichiers dans les dossiers Source et Reference.
+Les fichiers (Texte, image, etc) seront synchronisés.
+
+Le programme ne pourra pas gérer un sous dossier dans l’un des dossiers Source ou Reference.
+
+Le contenu de tous les dossiers est rafraichi toutes les minutes.
+
+Pour récupérer d’anciens fichiers supprimés ou modifiés, voir dans Backup.
+ 
+ 
+ 
+ 
+ 
+Synchronisation :
+
+// Cette classe permet de:
+/////////// Si la source est modifiee en premier /////////////
+// - Parcourir les fichiers dans Reference.
+// - Voir d'abord si un fichier qui n'est pas dans Source est dans Reference et le supprimer.
+// - Parcourir les fichiers dans Source.
+// - Verifier si ces fichiers existent deja dans Reference.
+// - Si ils n'existent pas encore, les creer.
+// - Si ils existent, verifier si ils sont a jour.
+// - Si ils ne sont pas a jour, enregistrer l'ancienne verson, la supprimer et creer la nouvelle.
+// - Si ils sont a jour, ne rien faire.
+
+/////////// Si c'est l'inverse /////////////
+// - refait le meme procede en inversant Source et Reference
+
+
+// Egalement :
+// - Le code est lance toutes les minutes.
+// - Les fichiers remplaces dans Reference sont enregistres dans Backup.
+
+//!\\ Si on modifie dans Source, il peut y avoir 2 backups.
+
+
+
+
+
+Automatisation:
+
+// Cette classe permet de:
+// Rendre la synchronisation automatique.
+
+
+Fichier_Backup:
+
+// Cette classe permet de:
+// Obtenir un fichier comprenant le nom et sa date de creation.
